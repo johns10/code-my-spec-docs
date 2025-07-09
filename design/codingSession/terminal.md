@@ -18,6 +18,19 @@ Pure VSCode terminal control operations. Handles terminal creation and command i
 1. Make specified terminal visible and focused
 2. Done
 
+### upsertTerminal(name, workingDirectory)
+1. Find existing terminal by name
+2. If found, return existing terminal
+3. If not found, create new terminal with specified name and working directory
+4. Return terminal instance
+5. Done
+
+### createSplitTerminal(name, workingDirectory)
+1. Create VSCode terminal with specified name and working directory
+2. Show terminal in split view
+3. Return terminal instance
+4. Done
+
 ## What This Module Does NOT Do
 - Claude Code session management
 - Prompt rule file reading
@@ -33,7 +46,9 @@ Pure VSCode terminal control operations. Handles terminal creation and command i
 - Easily mockable for testing
 
 ## Interface
-Three simple functions that other modules can call:
+Five simple functions that other modules can call:
 - createTerminal(name, workingDirectory)
 - sendCommand(terminal, command)
 - showTerminal(terminal)
+- upsertTerminal(name, workingDirectory)
+- createSplitTerminal(name, workingDirectory)

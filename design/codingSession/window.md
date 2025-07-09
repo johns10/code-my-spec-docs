@@ -7,7 +7,7 @@ Pure VSCode window and workspace control operations. Handles layout configuratio
 
 ### Layout Operations
 #### setupTwoColumnLayout()
-1. Configure VSCode to two-column layout
+1. If less than 2 columns, configure VSCode to two-column layout
 2. Done
 
 #### openFileInLeftColumn(filePath)
