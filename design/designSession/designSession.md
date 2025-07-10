@@ -5,7 +5,7 @@ Public API for the coding session context. Provides clean interface for starting
 
 ## Public Interface
 
-### startCodingSession()
+### startDesignSession()
 Main function to initiate a coding session from the currently active file.
 
 **Returns**: Promise<void>
@@ -24,7 +24,7 @@ Registers all coding session commands with VSCode during extension activation.
 - Acts as the single entry point for coding session functionality
 
 ## What This Module Does NOT Do
-- Business logic implementation (delegates to startCodingSession.ts)
+- Business logic implementation (delegates to startDesignSession.ts)
 - VSCode API calls (delegates to utility modules)
 - Command registration logic (delegates to commandRegistration.ts)
 
@@ -32,7 +32,7 @@ Registers all coding session commands with VSCode during extension activation.
 
 ### From Extension Activation
 ```typescript
-import { registerCommands } from './codingSession';
+import { registerCommands } from './designSession';
 
 export function activate(context: vscode.ExtensionContext) {
   registerCommands();
@@ -41,19 +41,19 @@ export function activate(context: vscode.ExtensionContext) {
 
 ### From Other Modules
 ```typescript
-import { startCodingSession } from './codingSession';
+import { startDesignSession } from './designSession';
 
 // Start a coding session programmatically
-await startCodingSession();
+await startDesignSession();
 ```
 
 ## Internal Module Coordination
-- Imports startCodingSession from startCodingSession.ts
+- Imports startDesignSession from startDesignSession.ts
 - Imports registerCommands from commandRegistration.ts
 - Re-exports both as clean public API
 - Internal modules remain hidden from external consumers
 
 ## Interface Design
 Simple, focused API with just two functions:
-- startCodingSession() - the main workflow
+- startDesignSession() - the main workflow
 - registerCommands() - extension setup

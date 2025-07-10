@@ -64,4 +64,4 @@ Seven simple functions that other modules can call:
 - showInformationMessage(message)
 
 ## Design Rationale
-This module provides a complete abstraction layer for all VSCode window and workspace operations needed by the coding session workflow. By centralizing these operations here, the business logic in startCodingSession.ts can remain pure and testable without any direct VSCode API dependencies.
+This module provides a complete abstraction layer for all VSCode window and workspace operations needed by the coding session workflow. By centralizing these operations here, the business logic in startDesignSession.ts can remain pure and testable without any direct VSCode API dependencies.

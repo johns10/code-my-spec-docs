@@ -34,6 +34,6 @@ One simple function that extension activation calls:
 // Extension calls this during activation
 registerStartCodingSessionCommand(() => {
   // Callback executes the actual business logic
-  startCodingSession();
+  startDesignSession();
 });
 ```

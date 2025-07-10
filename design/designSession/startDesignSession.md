@@ -5,7 +5,7 @@ Core business logic for starting a coding session. Orchestrates file creation, w
 
 ## Single Happy Path Operation
 
-### startCodingSession()
+### startDesignSession()
 1. Get currently active file in VSCode
 2. Verify it's a doc file in docs/design/ directory
 3. Determine corresponding code file path (docs/design/my_app/user_auth.md → lib/my_app/user_auth.ex)
