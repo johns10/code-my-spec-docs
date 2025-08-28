@@ -21,7 +21,7 @@ Registers all coding session commands with VSCode during extension activation.
 - Exports the public API for the coding session context
 - Hides internal implementation details
 - Provides clean interface for other parts of the extension
-- Acts as the single entry point for coding session functionality
+- Acts as the single entry point for one-off code generation
 
 ## What This Module Does NOT Do
 - Business logic implementation (delegates to startDesignSession.ts)
